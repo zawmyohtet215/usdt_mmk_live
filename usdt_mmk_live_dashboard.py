@@ -20,12 +20,14 @@ st.set_page_config(
 )
 
 ############################################ EXTRACT DATA ################################################
+username = st.secrets.db_credentials.username
+password = st.secrets.db_credentials.password
 
 # Database connection parameters
 db_params = {
     'dbname': 'exchange_data',
-    'user': 'postgres',
-    'password': '215215',
+    'user': username,
+    'password': password,
     'host': '13.213.132.179',
     'port': '5432'
 }
