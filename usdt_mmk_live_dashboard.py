@@ -19,6 +19,19 @@ st.set_page_config(
     layout="wide",
 )
 
+# Add some custom CSS to set a dark theme
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #222;
+        color: #ddd;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 ############################################ EXTRACT DATA ################################################
 username = st.secrets.db_credentials.username
 password = st.secrets.db_credentials.password
