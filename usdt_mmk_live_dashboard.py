@@ -193,7 +193,7 @@ while True:
         old_best_buy_vol_usdt = best_buy_vol_usdt
         old_best_sell_vol_usdt = best_sell_vol_usdt
         
-        time.sleep(2)
+        time.sleep(20)
     except Exception as e:
         # Print the error message
         print(f"An error occurred: {e}")
