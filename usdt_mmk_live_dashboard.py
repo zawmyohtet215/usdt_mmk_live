@@ -171,7 +171,7 @@ while True:
             with fig_col2:
                 fig2 = px.line(data_frame=df, y=["Top 10 Total Buy Vol USDT", "Top 10 Total Sell Vol USDT"], x="DateTime", color_discrete_sequence=["#26A17B", "#F94449"])
                 fig2.update_traces(text=df["Top 10 Total Sell Vol USDT"], textposition='top center')  # Add data labels for Top 10 Total Sell Vol USDT
-                fig2.update_yaxes(range=(df["Top 10 Total Sell Vol USDT"].min() - 30000, df["Top 10 Total Sell Vol USDT"].max() + 30000))
+                fig2.update_yaxes(range=(0, df["Top 10 Total Sell Vol USDT"].max() + 30000))
                 fig2.update_layout( title={
                                         'text': "(Top 10) Buy & Sell Volume Trend in USDT",
                                         'y':0.9,
