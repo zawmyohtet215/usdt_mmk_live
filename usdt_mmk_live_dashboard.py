@@ -49,7 +49,7 @@ sql_query = """SELECT
 		SUM("Buy USDT") AS "Top 10 Total Buy Vol USDT",
 		SUM("Sell USDT") AS "Top 10 Total Sell Vol USDT"
 FROM exchange_data.exchange_data
-WHERE DATE("DateTime") > CURRENT_DATE
+WHERE DATE("DateTime") = CURRENT_DATE
 GROUP BY "DateTime"
 ORDER BY "DateTime";"""
 
