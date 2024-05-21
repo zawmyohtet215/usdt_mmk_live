@@ -74,7 +74,9 @@ placeholder = st.empty()
 
 
 def fetch_data():
-    return pd.read_sql(sql_query, conn)
+	data_df = pd.read_sql(sql_query, conn)
+	conn.dispose()
+	return data_df
 
 # Get Live Data
 old_avg_buy_price = 0
